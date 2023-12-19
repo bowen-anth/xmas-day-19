@@ -29,14 +29,14 @@ function handleGuess(e) {
     
     /* bugs begin 🦠*/ 
     let currentState = []
-    let input = document.getElementById('users-input')
-    let guess = input.id
+    let input = document.getElementById('user-input')
+    let guess = input.value.toLowerCase()
     const guessArr = guess.split(' ')
-    wordArr.foreach((letter) => {
-        if (letter === guessArr['']) {
+    wordArr.forEach((letter) => {
+        if (guessArr.includes(letter)) {
             currentState.push(letter)
         } else {
-            currentState.push(letter)
+            currentState.push('-')
         }
     })
     /* bugs end 🦠*/ 
